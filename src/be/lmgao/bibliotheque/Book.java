@@ -12,11 +12,7 @@ public class Book {
 	LocalDate borrowingDate;
 	private String language;
 	
-	
-	public int getTitle() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 
 	public int getAuthor() {
@@ -84,6 +80,18 @@ public class Book {
 		
 	}
 
+
+	public String getTitle() {
+		return this.title;
+	}
+
+
+	public int getTotalPages() {
+		return totalPages;
+	}
+
+
+	
 
 	
 

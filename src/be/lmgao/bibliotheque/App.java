@@ -63,30 +63,9 @@ public class App {
             	System.out.println("Veuillez entrer une valeur valide !");
             }
         			
-	        if(choixTypeLivre == 3) { 
+	       
 	        	
-	        	System.out.println("Quel est le nom du dessinateur ?\n");
-	        	nvBook.setCartoonist(sc.nextLine());
-	        	
-	        	System.out.println("Le livre est-il en couleur ?\n Oui / Non ");
-	        	nvBook.setColor(sc.hasNext());  									// #### A VERIFIER ####
-	        	
-	        }else if (choixTypeLivre == 2) {
-	        	
-	        	System.out.println("Quel est le résumé du livre ?\n");
-	        	nvBook.setContent(sc.nextLine());
-	        	
-	        	System.out.println("Quel est le nombre maximum d'emprunteurs ? ");
-	        	
-	        	try {																	// je modifie l'entrée en byte 
-	            	nvBook.setMaxPeople(Integer.parseInt(sc.nextLine()));
-	            } catch (NumberFormatException e) {
-	            	System.out.println("Veuillez entrer une valeur valide !");
-	            }
-	        	
-	        }
-	        	
-	        	System.out.println("Quel est le nom du livre à ajouter?\n");
+	        	System.out.println("Quel est le titre du livre à ajouter?\n");
 	        	nvBook.setTitle(sc.nextLine());
 	        	
 	        	System.out.println("Quel est l'auteur du livre?\n");
@@ -98,9 +77,6 @@ public class App {
 		            } catch (NumberFormatException e) {
 		            	System.out.println("Veuillez entrer une valeur valide !");
 		            }
-	        	
-	        	System.out.println("Quel est l'auteur du livre?\n");
-	        	nvBook.setAuthor(sc.nextLine());
 	        	
 	        	System.out.println("Quel est le prix de location du livre\n");
 	        	try {																	// je modifie l'entrée en int
@@ -119,9 +95,36 @@ public class App {
                      System.out.println("Veuillez entrer une valeur valide !");
                  }
                  
+                 
+                 if(choixTypeLivre == 3) { 
+     	        	
+     	        	System.out.println("Quel est le nom du dessinateur ?\n");
+     	        	nvBook.setCartoonist(sc.nextLine());
+     	        	
+     	        	System.out.println("Le livre est-il en couleur ?\n Oui / Non ");
+     	        	nvBook.setColor(sc.hasNext());  									// #### A VERIFIER ####
+     	        	
+     	        }else if (choixTypeLivre == 2) {
+     	        	
+     	        	System.out.println("Quel est le résumé du livre ?\n");
+     	        	nvBook.setContent(sc.nextLine());
+     	        	
+     	        	System.out.println("Quel est le nombre maximum d'emprunteurs ? ");
+     	        	
+     	        	try {																	// je modifie l'entrée en byte 
+     	            	nvBook.setMaxPeople(Integer.parseInt(sc.nextLine()));
+     	            } catch (NumberFormatException e) {
+     	            	System.out.println("Veuillez entrer une valeur valide !");
+     	            }
+     	        	
+     	        }
+                 
+                 myLibrary.addBook(nvBook);	
+                 
+            System.out.println("Le nouveau livre " + nvBook.getTitle() + " est créé. Il comporte " + nvBook.getTotalPages() + " pages." );
+         	break;
         	
-	        
-        	break;
+        
         case 3:
         	System.out.println("\"EMPRUNTER UN LIVRE\"");
         	System.out.println("Quel est le nom du livre à emprunter?\n");
