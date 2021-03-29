@@ -1,6 +1,16 @@
 package be.lmgao.bibliotheque;
 
 public class GraphicNovel extends Book {
-	private String Cartoonist;
-	private boolean color;
+	String Cartoonist;
+	boolean color;
+	
+	
+	public void setCartoonist(String Cartoonist) {
+		this.Cartoonist = Cartoonist;
+		
+	}
+	public void setColor(boolean color) {
+		this.color = color;
+		
+	}
 }

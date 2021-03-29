@@ -57,43 +57,42 @@ public class App {
         	
         	int choixTypeLivre = 0;
         	
-        	try {																	// je modifie l'entrée en byte 
+        	try {																	
             	choixTypeLivre = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException e) {
             	System.out.println("Veuillez entrer une valeur valide !");
             }
         			
 	       
-	        	
-	        	System.out.println("Quel est le titre du livre à ajouter?\n");
-	        	nvBook.setTitle(sc.nextLine());
-	        	
-	        	System.out.println("Quel est l'auteur du livre?\n");
-	        	nvBook.setAuthor(sc.nextLine());
-	        	
-	        	System.out.println("Quel est le nombre de pages du livre\n");
-		        	try {																	// je modifie l'entrée en int
-		            	nvBook.setTotalPages(Integer.parseInt(sc.nextLine()));
-		            } catch (NumberFormatException e) {
-		            	System.out.println("Veuillez entrer une valeur valide !");
-		            }
-	        	
-	        	System.out.println("Quel est le prix de location du livre\n");
-	        	try {																	// je modifie l'entrée en int
-	            	nvBook.setRentalPeriod(Byte.parseByte(sc.nextLine()));
+        	System.out.println("Quel est le titre du livre à ajouter?\n");
+        	nvBook.setTitle(sc.nextLine());
+        	
+        	System.out.println("Quel est l'auteur du livre?\n");
+        	nvBook.setAuthor(sc.nextLine());
+        	
+        	System.out.println("Quel est le nombre de pages du livre\n");
+	        	try {																	
+	            	nvBook.setTotalPages(Integer.parseInt(sc.nextLine()));
 	            } catch (NumberFormatException e) {
 	            	System.out.println("Veuillez entrer une valeur valide !");
 	            }
-	        	
-	        	System.out.println("Quel est la langue du livre?\n");
-	        	nvBook.setLanguage(sc.nextLine());
-	        	
-	        	 System.out.println("Quel est la durée d'un emprunt de ce livre ?");
-                 try {
-                     nvBook.setLoanPeriod(Integer.parseInt(sc.nextLine()));
-                 } catch (NumberFormatException e) {
-                     System.out.println("Veuillez entrer une valeur valide !");
-                 }
+        	
+        	System.out.println("Quel est le prix de location du livre\n");
+        	try {																
+            	nvBook.setRentalPeriod(Byte.parseByte(sc.nextLine()));
+            } catch (NumberFormatException e) {
+            	System.out.println("Veuillez entrer une valeur valide !");
+            }
+        	
+        	System.out.println("Quel est la langue du livre?\n");
+        	nvBook.setLanguage(sc.nextLine());
+        	
+        	 System.out.println("Quel est la durée d'un emprunt de ce livre ?");
+             try {
+                 nvBook.setLoanPeriod(Integer.parseInt(sc.nextLine()));
+             } catch (NumberFormatException e) {
+                 System.out.println("Veuillez entrer une valeur valide !");
+             }
                  
                  
                  if(choixTypeLivre == 3) { 
@@ -111,7 +110,7 @@ public class App {
      	        	
      	        	System.out.println("Quel est le nombre maximum d'emprunteurs ? ");
      	        	
-     	        	try {																	// je modifie l'entrée en byte 
+     	        	try {															
      	            	nvBook.setMaxPeople(Integer.parseInt(sc.nextLine()));
      	            } catch (NumberFormatException e) {
      	            	System.out.println("Veuillez entrer une valeur valide !");
@@ -121,8 +120,9 @@ public class App {
                  
                  myLibrary.addBook(nvBook);	
                  
-            System.out.println("Le nouveau livre " + nvBook.getTitle() + " est créé. Il comporte " + nvBook.getTotalPages() + " pages." );
-         	break;
+            System.out.println("Le nouveau livre " + nvBook.getTitle() + " est créé. Il comporte " + nvBook.getTotalPages() + " pages." );  // Renvoi 0 pour getTotalPages ????????
+         	System.out.println(nvBook);
+            break;
         	
         
         case 3:

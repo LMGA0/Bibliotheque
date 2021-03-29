@@ -12,12 +12,24 @@ public class Book {
 	LocalDate borrowingDate;
 	private String language;
 	
+	
+	
 
-
-
-	public int getAuthor() {
-		// TODO Auto-generated method stub
-		return 0;
+	public Book(String title, String author, int totalPages, Person person, int loanPeriod, int rentalPrice,
+			LocalDate borrowingDate, String language) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.totalPages = totalPages;
+		this.person = person;
+		this.loanPeriod = loanPeriod;
+		this.rentalPrice = rentalPrice;
+		this.borrowingDate = borrowingDate;
+		this.language = language;
+	}
+	
+	public Book() {
+		
 	}
 
 
@@ -27,62 +39,43 @@ public class Book {
 	}
 
 
-	public void setAuthor(String nextLine) {
-		// TODO Auto-generated method stub
+	public void setAuthor(String author) {
+		this.author = author;
 		
 	}
 
 
-	public void setTotalPages(int nextLine) {
-		// TODO Auto-generated method stub
+	public void setTotalPages(int totalPages) {
+		this.totalPages = totalPages;
 		
 	}
 
 
-	public void setRentalPeriod(byte parseByte) {
-		// TODO Auto-generated method stub
+	public void setRentalPeriod(byte retalPrice) {
+		this.rentalPrice = retalPrice;
 		
 	}
 
 
-	public void setLanguage(String nextLine) {
-		// TODO Auto-generated method stub
+	public void setLanguage(String language) {
+		this.language = language;
 		
 	}
 
 
-	public void setLoanPeriod(int parseInt) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void setCartoonist(String nextLine) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void setColor(boolean nextLine) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void setMaxPeople(int string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void setContent(String nextLine) {
-		// TODO Auto-generated method stub
+	public void setLoanPeriod(int loanPeriod) {
+		this.loanPeriod = loanPeriod;
 		
 	}
 
 
 	public String getTitle() {
-		return this.title;
+		return title;
+	}
+
+
+	public String getAuthor() {
+		return author;
 	}
 
 
@@ -91,14 +84,45 @@ public class Book {
 	}
 
 
-	
+	public Person getPerson() {
+		return person;
+	}
+
+
+	public int getLoanPeriod() {
+		return loanPeriod;
+	}
+
+
+	public int getRentalPrice() {
+		return rentalPrice;
+	}
+
+
+	public LocalDate getBorrowingDate() {
+		return borrowingDate;
+	}
+
+
+	public String getLanguage() {
+		return language;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Book [title=" + title + ", author=" + author + ", totalPages=" + totalPages + ", person=" + person
+				+ ", loanPeriod=" + loanPeriod + ", rentalPrice=" + rentalPrice + ", borrowingDate=" + borrowingDate
+				+ ", language=" + language + "]";
+	}
+
+	public void setMaxPeople(int maxPeople) {
+		OnlineBook.super.maxPeople = maxPeople;
+		
+	}
+
 
 	
-
-
-
-
-
 	
 	
 	
