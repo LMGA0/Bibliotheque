@@ -21,6 +21,12 @@ import java.util.UUID;
 			this.books = new ArrayList<Book>();
 		}
 
+		public Person() {
+			// TODO Auto-generated constructor stub
+		}
+
+	
+
 		public String getName() {
 			return name;
 		}
