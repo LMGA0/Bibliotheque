@@ -121,6 +121,21 @@ public class Book {
 		
 	}
 
+	public void setCartoonist(String cartoonist) {
+		
+		
+	}
+
+	public void setColor(boolean hasNext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setContent(String nextLine) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 	
 	
